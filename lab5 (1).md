@@ -156,15 +156,15 @@ Fill in the slot each key maps to:
 
 **Q2.** The hash function multiplies by 31 before adding each character. What would happen if you simply summed the character values without multiplying? Give an example of two different strings that would collide under the summing approach but likely not under the polynomial approach.
 
-> Your answer: 
+> Your answer:  With polynomial hashing (multiplying by 31 each step), position matters, so "ab" and "ba" will almost never collide.
 
 **Q3.** TABLE_SIZE is chosen to be prime (11). Suppose you changed it to 10 (not prime). Would you expect more or fewer collisions? What property of prime-sized tables makes them distribute keys more evenly?
 
-> Your answer: 
+> Your answer: If TABLE_SIZE were changed from a prime (11) to a non-prime like 10, you would generally expect more collisions.
 
 **Q4.** The load factor after 10 insertions is approximately 0.91. This is high. What are the consequences of a high load factor for (a) a chaining table and (b) an open-addressing table?
 
-> Your answer: 
+> Your answer: In both cases, the table is close to “full,” so performance starts degrading noticeably.
 
 ---
 
